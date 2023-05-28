@@ -64,7 +64,7 @@ const signin = async (req, res) => {
   //     });
   //   }
   userModel
-    .find({ username: req.body.username })
+    .find({ email: req.body.email })
     .exec()
     .then((users) => {
       if (users.length < 1) {
